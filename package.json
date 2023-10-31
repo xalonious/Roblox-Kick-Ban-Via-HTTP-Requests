@@ -1,0 +1,15 @@
+{
+  "name": "httpmanager",
+  "version": "1.0.0",
+  "description": "perform kicks/bans in a roblox game via http requests",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "xander",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2"
+  }
+}
