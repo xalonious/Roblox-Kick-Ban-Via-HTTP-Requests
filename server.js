@@ -72,6 +72,8 @@ app.route('/data/:type')
     res.status(200).json({ message: `${type} data received and stored successfully` });
   })
   .get((req, res) => {
+    if (!validateApiKey(req, res)) return;
+    
     const type = req.params.type;
     const dataArray = storedData[type];
 

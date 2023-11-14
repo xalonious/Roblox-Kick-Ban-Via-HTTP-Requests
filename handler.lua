@@ -3,8 +3,11 @@ local DataStoreService = game:GetService("DataStoreService")
 local dataStore = DataStoreService:GetDataStore("bannedUsers")
 
 local function fetchRemoteData(endpointURL)
+	local headers = {
+		["Authorization"] = "Your_Api_Key" -- change this to your own api key
+	}
 	local success, response = pcall(function()
-		return HttpService:GetAsync(endpointURL)
+		return HttpService:GetAsync(endpointURL, false, headers)
 	end)
 	if success then
 		return HttpService:JSONDecode(response)
